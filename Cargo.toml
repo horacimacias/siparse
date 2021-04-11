@@ -1,0 +1,26 @@
+[package]
+
+name = "siparse"
+version = "1.0.0"
+authors = ["Sean McArthur <sean@seanmonstar.com>", "Horaci Macias <horacimacias@gmail.com>"]
+license = "MIT/Apache-2.0"
+description = "Same as httparse but for SIP instead of HTTP"
+repository = "https://github.com/seanmonstar/siparse"
+documentation = "https://docs.rs/siparse"
+readme = "README.md"
+keywords = ["sip", "parser", "no_std"]
+categories = ["network-programming", "no-std", "parser-implementations", "voip-programming"]
+
+build = "build.rs"
+
+[features]
+default = ["std"]
+std = []
+
+[dev-dependencies]
+pico-sys = "0.0.1"
+
+[profile.bench]
+lto = true
+codegen-units = 1
+opt-level = 3
