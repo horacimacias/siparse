@@ -252,6 +252,7 @@ impl<T> Status<T> {
 ///     }
 /// }
 /// ```
+// TODO: rfc3261#8.1.1: A valid SIP request formulated by a UAC MUST, at a minimum, contain the following header fields: To, From, CSeq, Call-ID, Max-Forwards, and Via; all of these header fields are mandatory in all SIP requests.
 #[derive(Debug, Eq, PartialEq)]
 pub struct Request<'headers, 'buf: 'headers> {
     /// The request method, such as `GET`.
